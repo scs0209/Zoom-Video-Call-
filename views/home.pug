@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Noom
+    //- css작업해주기 전에 페이지가 그나마 덜 못생겨 보이게 해주는 것
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.9.0/mvp.css">
+  body 
+      header
+        h1 Noom
+      main
+      div#myStream
+        video#myFace(autoplay, playsinline, width="400", height="400")
+        button#mute Mute
+        button#camera Camera Off
+        select#cameras(name="") 
+          option(value="device") Face Camera 
+      script(src="/socket.io/socket.io.js")
+      script(src="/public/js/app.js") 
